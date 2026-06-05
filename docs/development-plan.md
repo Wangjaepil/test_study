@@ -26,7 +26,7 @@ Exit criteria:
 
 ### M1 - Domain Decision Core
 
-Status: Planned
+Status: Complete
 
 Scope:
 
