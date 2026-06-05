@@ -24,21 +24,21 @@ Build a Python-based vehicle safety system that detects children or pets left in
 
 ## Current Milestone
 
-M2 - Alert Lifecycle
+M3 - Simulated Sensors And Integration Flow
 
 Next focus:
 
-- Add alert record model.
-- Add cooldown policy.
-- Add acknowledgement state.
-- Add escalation policy.
-- Write tests for duplicate prevention and escalation timing.
+- Add simulated sensor adapter.
+- Add fixtures for child, pet, no occupant, stale data, and malformed data.
+- Add integration flow from sensor input to alert decision.
+- Add diagnostics for missing or contradictory input.
 
 ## Completed Milestones
 
 | Date | Milestone | Outcome |
 | --- | --- | --- |
 | 2026-06-05 | M1 - Domain Decision Core | Added vehicle state, alert decision, and tests for child, pet, unknown living occupant, no occupant, attended, and moving vehicle cases. |
+| 2026-06-05 | M2 - Alert Lifecycle | Added alert record, acknowledgement, cooldown, escalation, and audit-state tests. |
 
 ## Working Agreements
 

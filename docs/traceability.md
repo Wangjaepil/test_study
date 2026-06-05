@@ -25,10 +25,10 @@ This file connects requirements, tests, implementation, and release evidence. Up
 | `FR-VS-004` | M1 | [tests/unit/test_domain.py](../tests/unit/test_domain.py) | [src/vehicle_guardian/domain.py](../src/vehicle_guardian/domain.py) | Implemented |
 | `FR-AL-001` | M1 | [tests/unit/test_domain.py](../tests/unit/test_domain.py) | [src/vehicle_guardian/domain.py](../src/vehicle_guardian/domain.py) | Implemented |
 | `FR-AL-002` | M5 | Planned | Planned | Planned |
-| `FR-AL-003` | M2 | Planned | Planned | Planned |
-| `FR-AL-004` | M2 | Planned | Planned | Planned |
-| `FR-AL-005` | M2 | Planned | Planned | Planned |
-| `FR-AL-006` | M2 | Planned | Planned | Planned |
+| `FR-AL-003` | M2 | [tests/unit/test_domain.py](../tests/unit/test_domain.py) | [src/vehicle_guardian/domain.py](../src/vehicle_guardian/domain.py) | Implemented |
+| `FR-AL-004` | M2 | [tests/unit/test_domain.py](../tests/unit/test_domain.py) | [src/vehicle_guardian/domain.py](../src/vehicle_guardian/domain.py) | Implemented |
+| `FR-AL-005` | M2 | [tests/unit/test_domain.py](../tests/unit/test_domain.py) | [src/vehicle_guardian/domain.py](../src/vehicle_guardian/domain.py) | Implemented |
+| `FR-AL-006` | M2 | [tests/unit/test_domain.py](../tests/unit/test_domain.py) | [src/vehicle_guardian/domain.py](../src/vehicle_guardian/domain.py) | Implemented |
 | `FR-CF-001` | M4 | Planned | Planned | Planned |
 | `FR-CF-002` | M4 | Planned | Planned | Planned |
 | `FR-CF-003` | M4 | Planned | Planned | Planned |
@@ -37,14 +37,14 @@ This file connects requirements, tests, implementation, and release evidence. Up
 | `FR-OB-002` | M5 | Planned | Planned | Planned |
 | `FR-OB-003` | M6 | Planned | Planned | Planned |
 | `FR-TS-001` | M1 | Planned | Planned | Planned |
-| `FR-TS-002` | M2 | Planned | Planned | Planned |
+| `FR-TS-002` | M2 | [tests/unit/test_domain.py](../tests/unit/test_domain.py) | [src/vehicle_guardian/domain.py](../src/vehicle_guardian/domain.py) | Implemented |
 | `FR-TS-003` | M3 | Planned | Planned | Planned |
 | `FR-TS-004` | M3 | Planned | Planned | Planned |
 | `NFR-SF-001` | M1 | [tests/unit/test_domain.py](../tests/unit/test_domain.py) | [src/vehicle_guardian/domain.py](../src/vehicle_guardian/domain.py) | Implemented |
 | `NFR-SF-002` | M1 | [tests/unit/test_domain.py](../tests/unit/test_domain.py) | [src/vehicle_guardian/domain.py](../src/vehicle_guardian/domain.py) | Implemented |
-| `NFR-SF-003` | M2 | Planned | Planned | Planned |
+| `NFR-SF-003` | M2 | [tests/unit/test_domain.py](../tests/unit/test_domain.py) | [src/vehicle_guardian/domain.py](../src/vehicle_guardian/domain.py) | Implemented |
 | `NFR-RL-001` | M3 | Planned | Planned | Planned |
-| `NFR-RL-002` | M2, M5 | Planned | Planned | Planned |
+| `NFR-RL-002` | M2, M5 | [tests/unit/test_domain.py](../tests/unit/test_domain.py) | [src/vehicle_guardian/domain.py](../src/vehicle_guardian/domain.py) | Implemented |
 | `NFR-RL-003` | M3 | Planned | Planned | Planned |
 | `NFR-PF-001` | M6 | Planned | Planned | Planned |
 | `NFR-PF-002` | M3 | Planned | Planned | Planned |
@@ -66,8 +66,8 @@ This file connects requirements, tests, implementation, and release evidence. Up
 
 | Evidence | Requirement IDs |
 | --- | --- |
-| [src/vehicle_guardian/domain.py](../src/vehicle_guardian/domain.py) | `FR-OD-001`, `FR-OD-002`, `FR-OD-003`, `FR-OD-004`, `FR-OD-005`, `FR-VS-001`, `FR-VS-002`, `FR-VS-004`, `FR-AL-001`, `NFR-SF-001`, `NFR-SF-002`, `NFR-PF-003` |
-| [tests/unit/test_domain.py](../tests/unit/test_domain.py) | `FR-OD-001`, `FR-OD-002`, `FR-OD-003`, `FR-OD-004`, `FR-OD-005`, `FR-VS-001`, `FR-VS-002`, `FR-VS-004`, `FR-AL-001`, `NFR-SF-001`, `NFR-SF-002`, `NFR-PF-003` |
+| [src/vehicle_guardian/domain.py](../src/vehicle_guardian/domain.py) | `FR-OD-001`, `FR-OD-002`, `FR-OD-003`, `FR-OD-004`, `FR-OD-005`, `FR-VS-001`, `FR-VS-002`, `FR-VS-004`, `FR-AL-001`, `FR-AL-003`, `FR-AL-004`, `FR-AL-005`, `FR-AL-006`, `FR-TS-002`, `NFR-SF-001`, `NFR-SF-002`, `NFR-SF-003`, `NFR-RL-002`, `NFR-PF-003` |
+| [tests/unit/test_domain.py](../tests/unit/test_domain.py) | `FR-OD-001`, `FR-OD-002`, `FR-OD-003`, `FR-OD-004`, `FR-OD-005`, `FR-VS-001`, `FR-VS-002`, `FR-VS-004`, `FR-AL-001`, `FR-AL-003`, `FR-AL-004`, `FR-AL-005`, `FR-AL-006`, `FR-TS-002`, `NFR-SF-001`, `NFR-SF-002`, `NFR-SF-003`, `NFR-RL-002`, `NFR-PF-003` |
 | [.github/workflows/pr-validation.yml](../.github/workflows/pr-validation.yml) | `NFR-CP-001`, `NFR-CP-002` |
 | [pyproject.toml](../pyproject.toml) | `NFR-CP-001` |
 | [docs/development-plan.md](development-plan.md) | `NFR-MT-003` |

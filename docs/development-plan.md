@@ -53,7 +53,7 @@ Requirement coverage:
 
 ### M2 - Alert Lifecycle
 
-Status: Planned
+Status: Complete
 
 Scope:
 
