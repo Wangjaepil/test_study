@@ -14,92 +14,92 @@ Build a Python system that detects whether a child or pet remains inside a vehic
 
 ### Occupant Detection
 
-- The system shall detect the possible presence of a child inside the vehicle.
-- The system shall detect the possible presence of a pet inside the vehicle.
-- The system shall classify detection results as `none`, `child`, `pet`, or `unknown_living_occupant` when confidence is insufficient for a specific class.
-- The system shall provide a confidence score for each detection result.
-- The system shall include the input source and detection timestamp in each detection result.
-- The system shall support simulated sensor input for tests and demos.
+- `FR-OD-001`: The system shall detect the possible presence of a child inside the vehicle.
+- `FR-OD-002`: The system shall detect the possible presence of a pet inside the vehicle.
+- `FR-OD-003`: The system shall classify detection results as `none`, `child`, `pet`, or `unknown_living_occupant` when confidence is insufficient for a specific class.
+- `FR-OD-004`: The system shall provide a confidence score for each detection result.
+- `FR-OD-005`: The system shall include the input source and detection timestamp in each detection result.
+- `FR-OD-006`: The system shall support simulated sensor input for tests and demos.
 
 ### Vehicle State Awareness
 
-- The system shall determine whether the vehicle is parked.
-- The system shall determine whether the ignition or drive state indicates the vehicle is unattended.
-- The system shall detect recent door open and close events when available.
-- The system shall combine occupant detection with vehicle state before triggering an alert.
+- `FR-VS-001`: The system shall determine whether the vehicle is parked.
+- `FR-VS-002`: The system shall determine whether the ignition or drive state indicates the vehicle is unattended.
+- `FR-VS-003`: The system shall detect recent door open and close events when available.
+- `FR-VS-004`: The system shall combine occupant detection with vehicle state before triggering an alert.
 
 ### Alerting
 
-- The system shall trigger an alert when a child or pet is detected in an unattended parked vehicle.
-- The system shall support configurable alert channels.
-- The system shall escalate alerts when the first alert is not acknowledged within a configured time.
-- The system shall prevent duplicate alerts within a configurable cooldown window.
-- The system shall record alert attempts, acknowledgement state, timestamp, and target channel.
-- The system shall allow alert acknowledgement through a supported interface or simulated test hook.
+- `FR-AL-001`: The system shall trigger an alert when a child or pet is detected in an unattended parked vehicle.
+- `FR-AL-002`: The system shall support configurable alert channels.
+- `FR-AL-003`: The system shall escalate alerts when the first alert is not acknowledged within a configured time.
+- `FR-AL-004`: The system shall prevent duplicate alerts within a configurable cooldown window.
+- `FR-AL-005`: The system shall record alert attempts, acknowledgement state, timestamp, and target channel.
+- `FR-AL-006`: The system shall allow alert acknowledgement through a supported interface or simulated test hook.
 
 ### Configuration
 
-- The system shall provide default safety-oriented thresholds.
-- The system shall allow detection threshold, alert delay, escalation delay, and cooldown duration to be configured.
-- The system shall validate configuration values at startup.
-- The system shall fail safely when required configuration is missing or invalid.
+- `FR-CF-001`: The system shall provide default safety-oriented thresholds.
+- `FR-CF-002`: The system shall allow detection threshold, alert delay, escalation delay, and cooldown duration to be configured.
+- `FR-CF-003`: The system shall validate configuration values at startup.
+- `FR-CF-004`: The system shall fail safely when required configuration is missing or invalid.
 
 ### Observability
 
-- The system shall log detection decisions, alert decisions, and delivery outcomes.
-- The system shall expose enough structured status information for tests and operational diagnostics.
-- The system shall avoid logging personally identifiable information.
+- `FR-OB-001`: The system shall log detection decisions, alert decisions, and delivery outcomes.
+- `FR-OB-002`: The system shall expose enough structured status information for tests and operational diagnostics.
+- `FR-OB-003`: The system shall avoid logging personally identifiable information.
 
 ### Testing
 
-- The system shall include unit tests for detection decision logic.
-- The system shall include unit tests for alert cooldown and escalation behavior.
-- The system shall include integration tests for the flow from sensor input to alert decision.
-- The system shall include tests for malformed, missing, stale, and contradictory sensor data.
+- `FR-TS-001`: The system shall include unit tests for detection decision logic.
+- `FR-TS-002`: The system shall include unit tests for alert cooldown and escalation behavior.
+- `FR-TS-003`: The system shall include integration tests for the flow from sensor input to alert decision.
+- `FR-TS-004`: The system shall include tests for malformed, missing, stale, and contradictory sensor data.
 
 ## Non-Functional Requirements
 
 ### Safety
 
-- The system shall prioritize reducing false negatives over reducing false positives.
-- The system shall use conservative defaults when confidence is uncertain.
-- The system shall preserve an auditable decision trail for safety-critical alerts.
+- `NFR-SF-001`: The system shall prioritize reducing false negatives over reducing false positives.
+- `NFR-SF-002`: The system shall use conservative defaults when confidence is uncertain.
+- `NFR-SF-003`: The system shall preserve an auditable decision trail for safety-critical alerts.
 
 ### Reliability
 
-- The system shall continue operating when a non-critical sensor source is unavailable.
-- The system shall handle network failures during alert delivery and retry according to policy.
-- The system shall avoid crashing on malformed sensor input.
+- `NFR-RL-001`: The system shall continue operating when a non-critical sensor source is unavailable.
+- `NFR-RL-002`: The system shall handle network failures during alert delivery and retry according to policy.
+- `NFR-RL-003`: The system shall avoid crashing on malformed sensor input.
 
 ### Performance
 
-- The system shall make an alert decision within 5 seconds after receiving all required unattended-vehicle signals.
-- The system shall support local test execution without requiring physical sensors.
-- The system shall keep detection and alert decision logic deterministic in tests.
+- `NFR-PF-001`: The system shall make an alert decision within 5 seconds after receiving all required unattended-vehicle signals.
+- `NFR-PF-002`: The system shall support local test execution without requiring physical sensors.
+- `NFR-PF-003`: The system shall keep detection and alert decision logic deterministic in tests.
 
 ### Security
 
-- The system shall not commit secrets, tokens, or private contact information.
-- The system shall load secrets from environment variables or a secure secret manager.
-- The system shall validate external webhook URLs and alert targets.
+- `NFR-SC-001`: The system shall not commit secrets, tokens, or private contact information.
+- `NFR-SC-002`: The system shall load secrets from environment variables or a secure secret manager.
+- `NFR-SC-003`: The system shall validate external webhook URLs and alert targets.
 
 ### Privacy
 
-- The system shall minimize storage of raw camera, microphone, or location data.
-- The system shall redact sensitive information from logs.
-- The system shall provide a configurable retention policy for event records.
+- `NFR-PR-001`: The system shall minimize storage of raw camera, microphone, or location data.
+- `NFR-PR-002`: The system shall redact sensitive information from logs.
+- `NFR-PR-003`: The system shall provide a configurable retention policy for event records.
 
 ### Maintainability
 
-- The system shall use modular components for sensors, detection, alerting, and configuration.
-- The system shall maintain clear boundaries between domain logic and external integrations.
-- The system shall include documentation for local development, testing, and release preparation.
+- `NFR-MT-001`: The system shall use modular components for sensors, detection, alerting, and configuration.
+- `NFR-MT-002`: The system shall maintain clear boundaries between domain logic and external integrations.
+- `NFR-MT-003`: The system shall include documentation for local development, testing, and release preparation.
 
 ### Compatibility
 
-- The system shall support Python 3.11 and newer.
-- The system shall run in CI on the latest available Ubuntu GitHub Actions runner.
-- The system shall be structured so it can later integrate with embedded devices, mobile apps, or cloud services.
+- `NFR-CP-001`: The system shall support Python 3.11 and newer.
+- `NFR-CP-002`: The system shall run in CI on the latest available Ubuntu GitHub Actions runner.
+- `NFR-CP-003`: The system shall be structured so it can later integrate with embedded devices, mobile apps, or cloud services.
 
 ## Acceptance Criteria For Initial Version
 

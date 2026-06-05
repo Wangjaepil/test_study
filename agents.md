@@ -8,6 +8,8 @@ This project is a Python-based in-vehicle occupant safety detection system. It d
 
 - Use Python as the primary development language.
 - Follow test-driven development (TDD): write a failing test first, implement the minimum code to pass it, then refactor.
+- Maintain bidirectional traceability from requirements to tests, implementation, and release evidence.
+- Keep `memory.md` updated with durable project decisions, milestone progress, and important constraints.
 - Keep safety-critical behavior explicit, testable, and observable.
 - Prefer small, focused modules with clear responsibilities.
 - Avoid hidden side effects in detection, notification, and configuration code.
@@ -29,12 +31,15 @@ This project is a Python-based in-vehicle occupant safety detection system. It d
 │   └── fixtures/
 ├── docs/
 │   └── requirements.md
+│   └── development-plan.md
+│   └── traceability.md
 ├── releases/
 │   └── index.md
 ├── .github/
 │   └── workflows/
 │       └── pr-validation.yml
 └── agents.md
+└── memory.md
 ```
 
 ## TDD Workflow
@@ -44,6 +49,8 @@ This project is a Python-based in-vehicle occupant safety detection system. It d
 3. Implement the smallest production change that passes the test.
 4. Refactor while keeping all tests green.
 5. Add edge-case tests for safety-critical logic.
+6. Update `docs/traceability.md` with requirement, test, and implementation evidence.
+7. Update `memory.md` when the change creates a lasting decision or milestone update.
 
 Recommended commands:
 
@@ -77,6 +84,8 @@ Rules:
 
 ## Pull Request Checklist
 
+- Requirement IDs are listed in the pull request.
+- `docs/traceability.md` is updated for affected requirements.
 - Tests were written before or alongside implementation.
 - Unit tests pass locally.
 - Integration tests pass when applicable.
@@ -102,3 +111,4 @@ When modifying this repository:
 - Do not relax alert thresholds, validation, or safety checks without explicit justification.
 - Prefer deterministic tests over time-dependent or network-dependent tests.
 - If a CI failure is unrelated to the change, document it clearly instead of hiding it.
+- Check `memory.md` before starting work and update it when a durable decision changes.
