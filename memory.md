@@ -24,13 +24,21 @@ Build a Python-based vehicle safety system that detects children or pets left in
 
 ## Current Milestone
 
-M1 - Domain Decision Core
+M2 - Alert Lifecycle
 
 Next focus:
 
-- Add vehicle state model.
-- Add alert decision model.
-- Write tests for child, pet, unknown living occupant, and no occupant cases in parked unattended vehicles.
+- Add alert record model.
+- Add cooldown policy.
+- Add acknowledgement state.
+- Add escalation policy.
+- Write tests for duplicate prevention and escalation timing.
+
+## Completed Milestones
+
+| Date | Milestone | Outcome |
+| --- | --- | --- |
+| 2026-06-05 | M1 - Domain Decision Core | Added vehicle state, alert decision, and tests for child, pet, unknown living occupant, no occupant, attended, and moving vehicle cases. |
 
 ## Working Agreements
 
