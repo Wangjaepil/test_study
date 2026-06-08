@@ -1,1 +1,89 @@
-
+name: Bug
+description: 결함 현상, 재현 절차, 영향 범위를 등록합니다.
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        - 재현 가능한 사실 기준으로 작성
+        - 기대 결과와 실제 결과를 분리
+        - 로그, 스크린샷, 입력값 등 증거 자료 첨부
+  - type: textarea
+    id: summary
+    attributes:
+      label: 결함 요약
+      description: 발생 현상, 영향 범위, 업무 영향을 간단히 작성
+      placeholder: |
+        - 발생 현상:
+        - 영향 범위:
+        - 업무 영향:
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: 재현 절차
+      description: 동일 현상을 재현할 수 있는 최소 절차 작성
+      placeholder: |
+        1. 사전 조건:
+        2. 입력값/동작:
+        3. 발생 결과:
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: 기대 결과
+      description: 요구사항 또는 정상 동작 기준 작성
+      placeholder: |
+        - 기준:
+        - 기대 동작:
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: 실제 결과
+      description: 실제 관찰 결과와 오류 메시지 작성
+      placeholder: |
+        - 실제 동작:
+        - 오류 메시지:
+        - 발생 빈도:
+    validations:
+      required: true
+  - type: dropdown
+    id: severity
+    attributes:
+      label: 심각도
+      options:
+        - Critical
+        - Major
+        - Minor
+        - Trivial
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: 환경
+      description: OS, 브라우저, 앱 버전, 빌드 번호 등 작성
+      placeholder: 예) Windows 11, Chrome 125, v1.0.0
+  - type: textarea
+    id: evidence
+    attributes:
+      label: 증거 자료
+      description: 분석에 필요한 참고 자료 작성 또는 첨부
+      placeholder: |
+        - 로그:
+        - 스크린샷:
+        - 입력 데이터:
+        - 관련 파일:
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: 등록 전 확인
+      options:
+        - label: 중복 결함 등록 여부 확인
+        - label: 재현 절차와 기대/실제 결과 구분
+        - label: 증거 자료 또는 확인 가능한 단서 첨부
